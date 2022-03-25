@@ -17,7 +17,7 @@ while (len(allWords)>=3):
     del positions[:]
     # print(len(allWords))
 
-    blcLt = list(input("New Black Letters:(That are not Yellow or Green) (If none input \"-\") ").replace(" ",""))
+    blcLt = list(input("New Black Letters:(That are not Yellow or Green)(You can repeat letters for ease)(If none input \"-\") ").replace(" ",""))
     if (blcLt[0]!='-'):
         for letter in blcLt:
             for word in allWords:
@@ -27,7 +27,7 @@ while (len(allWords)>=3):
             del posWords[:]
         # print(len(allWords))
 
-    yelLt = list(input("Yellow Letters:(Include the old as position might change) (If none input \"-\") ").replace(" ",""))
+    yelLt = list(input("Yellow Letters:(Include the old as position might change)(Include repeated letters too)(If none input \"-\") ").replace(" ",""))
     if (yelLt[0]!='-'):
         for letter in yelLt:
             for word in allWords:
@@ -53,7 +53,7 @@ while (len(allWords)>=3):
         temp+=1
 
     del positions[:]
-    grnLt = list(input("Green Letters:(Include the old ones too) (If none input \"-\") ").replace(" ",""))
+    grnLt = list(input("Green Letters:(Include the old ones too)(Include repeated letters too)(If none input \"-\") ").replace(" ",""))
     temp = len(grnLt)
     if (temp != 0 and grnLt[0]!="-"):
         for i in range(temp):
